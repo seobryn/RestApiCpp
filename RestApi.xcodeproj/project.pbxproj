@@ -25,6 +25,7 @@
 /* Begin PBXFileReference section */
 		22837E1F28E4F2EB0031FB5A /* RestApi */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = RestApi; sourceTree = BUILT_PRODUCTS_DIR; };
 		22837E2228E4F2EB0031FB5A /* main.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = main.cpp; sourceTree = "<group>"; };
+		228480E728E4FA1500286CCD /* Crow */ = {isa = PBXFileReference; lastKnownFileType = folder; path = Crow; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -41,7 +42,8 @@
 		22837E1628E4F2EA0031FB5A = {
 			isa = PBXGroup;
 			children = (
-				22837E2128E4F2EB0031FB5A /* RestApi */,
+				22837E2928E4F58D0031FB5A /* src */,
+				22837E2A28E4F7B90031FB5A /* deps */,
 				22837E2028E4F2EB0031FB5A /* Products */,
 			);
 			sourceTree = "<group>";
@@ -54,12 +56,20 @@
 			name = Products;
 			sourceTree = "<group>";
 		};
-		22837E2128E4F2EB0031FB5A /* RestApi */ = {
+		22837E2928E4F58D0031FB5A /* src */ = {
 			isa = PBXGroup;
 			children = (
 				22837E2228E4F2EB0031FB5A /* main.cpp */,
 			);
-			path = RestApi;
+			path = src;
+			sourceTree = "<group>";
+		};
+		22837E2A28E4F7B90031FB5A /* deps */ = {
+			isa = PBXGroup;
+			children = (
+				228480E728E4FA1500286CCD /* Crow */,
+			);
+			path = deps;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -240,9 +250,18 @@
 		22837E2728E4F2EB0031FB5A /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				CLANG_CXX_LANGUAGE_STANDARD = "c++20";
+				CLANG_CXX_LIBRARY = "libc++";
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = XV7X6K2G4R;
+				DEVELOPMENT_TEAM = "";
 				ENABLE_HARDENED_RUNTIME = YES;
+				GCC_C_LANGUAGE_STANDARD = c11;
+				HEADER_SEARCH_PATHS = (
+					/usr/local/Cellar/boost/1.79.0_1/include,
+					"/Users/jose.joya/Documents/Projects/CPP/RestApi/deps/Crow/include/**",
+					/usr/local/Cellar/asio/1.24.0/include,
+				);
+				INSTALL_PATH = .;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 			};
 			name = Debug;
@@ -250,9 +269,18 @@
 		22837E2828E4F2EB0031FB5A /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				CLANG_CXX_LANGUAGE_STANDARD = "c++20";
+				CLANG_CXX_LIBRARY = "libc++";
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = XV7X6K2G4R;
+				DEVELOPMENT_TEAM = "";
 				ENABLE_HARDENED_RUNTIME = YES;
+				GCC_C_LANGUAGE_STANDARD = c11;
+				HEADER_SEARCH_PATHS = (
+					/usr/local/Cellar/boost/1.79.0_1/include,
+					"/Users/jose.joya/Documents/Projects/CPP/RestApi/deps/Crow/include/**",
+					/usr/local/Cellar/asio/1.24.0/include,
+				);
+				INSTALL_PATH = .;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 			};
 			name = Release;
